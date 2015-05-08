@@ -29,6 +29,7 @@ class ProductTest < ActiveSupport::TestCase
 	def new_product(image_url)
 		Product.new(title: "bool",
 			    description: "daf",
+					price: 40.2,
 			    image_url: image_url)
 	end
 
