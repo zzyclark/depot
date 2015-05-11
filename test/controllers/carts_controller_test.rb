@@ -29,15 +29,16 @@ class CartsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, id: @cart
-    assert_response :success
-  end
-
-  test "should update cart" do
-    patch :update, id: @cart, cart: {  }
-    assert_redirected_to cart_path(assigns(:cart))
-  end
+# temp hide edit cart test
+  # test "should get edit" do
+  #   get :edit, id: @cart
+  #   assert_response :success
+  # end
+  # 
+  # test "should update cart" do
+  #   patch :update, id: @cart, cart: {  }
+  #   assert_redirected_to cart_path(assigns(:cart))
+  # end
 
   test "should destroy cart" do
     assert_difference('Cart.count', -1) do
