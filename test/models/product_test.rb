@@ -53,4 +53,13 @@ class ProductTest < ActiveSupport::TestCase
 		assert !product.save
 		assert_equal I18n.translate('errors.messages.taken'), product.errors[:title].join(': ')
 	end
+
+	test "product is not valid without a unique image_url" do
+		product = product = Product.new(title: "Unique name",
+													description: "yyy",
+													price: 1,
+													image_url: products(:ruby).image_url)
+	  assert !product.save
+		assert_equal I18n.translate('errors.messages.taken'), product.errors[:image_url].join(': ')
+	end
 end
