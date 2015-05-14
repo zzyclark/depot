@@ -54,6 +54,25 @@
     background: #141;
     color: #bfb;
 
+    form, div {
+      display: inline;
+    }
+
+    input {
+      font-size: small;
+    }
+
+    #cart {
+      font-size: smaller;
+      color: white;
+
+      table {
+        border-top: 1px dotted #595;
+        border-bottom: 1px dotted #595;
+        margin-bottom: 10px;
+      }
+    }
+
     ul {
       padding: 0;
       li {
@@ -65,5 +84,19 @@
       }
     }
   }
+}
+
+.clarkbutton {
+  background-color:#ed8223;
+	color:#fff;
+	font-family:'Helvetica Neue',sans-serif;
+	font-size:14px;
+	border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border:0;
+	text-shadow:#C17C3A 0 -1px 0;
+	width:90px;
+	height:28px
 }
 /* END_HIGHLIGHT */
