@@ -65,6 +65,14 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     respond_to do |format|
       format.atom
+      # xml render
+      # format.xml { render :xml => @product.to_xml(:include => :orders) }
+      
+      # json render
+      # format.json {render :json => @product.to_json(:include => :orders)}
+      
+      # html render
+      # format.html
     end
   end
 
